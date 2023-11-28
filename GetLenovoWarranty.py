@@ -60,9 +60,8 @@ def warranty_2_excel(path):
         if len(value) == 3:
             ws['P' + str(i)].value = str(value[2])
     wb.save(path)
-    if error is not None:
+    if len(error) > 0:
         print(error)
-
 if __name__ == '__main__':
     path = '/Users/xxx/lenovo.xlsx'
     warranty_2_excel(path) 
